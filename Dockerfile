@@ -13,5 +13,6 @@ COPY . /usr/src/wtorrent
 # Install app dependencies
 RUN npm install
 
-EXPOSE 8080
+ENV PORT 80
+EXPOSE ${PORT}
 CMD [ "npm", "start" ]
