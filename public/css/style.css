@@ -24,3 +24,16 @@ a.editable-click {
   color: #fff;
   text-decoration: underline;
 }
+
+.loader {
+  position: absolute;
+  opacity: 0.8;
+  background-color: #3c763d;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -10px;
+  border-radius: inherit;
+}
