@@ -4,8 +4,8 @@
   "description": "Dashboard for webTorrent",
   "main": "server.js",
   "scripts": {
-    "watch": "watchify -o public/js/bundle.js -v -d lib/client/app.js",
-    "build": "npm run browserify ",
+    "watch": "watchify lib/client/app.js -t [ babelify --presets es2015,react ] --outfile public/js/bundle.js -v",
+    "build": "browserify lib/client/app.js -t [ babelify --presets es2015,react ] --outfile public/js/bundle.js -v",
     "start": "node server.js"
   },
   "author": "Aram Drevekenin",
@@ -43,10 +43,5 @@
     "reactify": "~0.14.0",
     "uglify-js": "~2.4.15",
     "watchify": "^3.1.1"
-  },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
   }
 }
